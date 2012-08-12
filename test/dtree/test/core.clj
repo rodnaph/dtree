@@ -12,5 +12,17 @@
 ])
 
 (facts "about shannon entropies"
+
   (shannon-entropy data) => 0.9709505944546686)
+
+(facts "about splitting datasets"
+
+  (split-dataset data 0 1)
+    => [{:label "yes" :features [1]}
+        {:label "yes" :features [1]}
+        {:label "no" :features [0]}]
+
+  (split-dataset data 0 0)
+    => [{:label "no" :features [1]}
+        {:label "no" :features [1]}])
 
