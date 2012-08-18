@@ -24,5 +24,8 @@
 
   (split-dataset data 0 0)
     => [{:label "no" :features [1]}
-        {:label "no" :features [1]}])
+        {:label "no" :features [1]}]
+
+  (best-feature-to-split data)
+    => 0)
 
